@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | Hexo</title>
+  <title>gbdt 梯度提升树 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="梯度提升树 gbdtboosting  提升  通过改变训练样本的权重(增加错分样本的权重，减小分对样本的的权重)，学习多个分类器，并将这些分类器线性组合，提高分类器性能。 数学表示为：$ f(x) = w_0 + \sum\limits_{m=1}^M w_m \phi_m(x) $   Gradient Boosting Decison Tree gbdt是通过采用加法模型(即基函数的线性组合">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/03/25/hello-world/index.html">
+<meta property="og:title" content="gbdt 梯度提升树">
+<meta property="og:url" content="http://yoursite.com/2018/03/25/gbdt/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="梯度提升树 gbdtboosting  提升  通过改变训练样本的权重(增加错分样本的权重，减小分对样本的的权重)，学习多个分类器，并将这些分类器线性组合，提高分类器性能。 数学表示为：$ f(x) = w_0 + \sum\limits_{m=1}^M w_m \phi_m(x) $   Gradient Boosting Decison Tree gbdt是通过采用加法模型(即基函数的线性组合">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-25T11:22:40.893Z">
+<meta property="og:image" content="http://yoursite.com/2018/03/25/images/gbdt.png">
+<meta property="og:updated_time" content="2018-03-25T14:40:06.827Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="gbdt 梯度提升树">
+<meta name="twitter:description" content="梯度提升树 gbdtboosting  提升  通过改变训练样本的权重(增加错分样本的权重，减小分对样本的的权重)，学习多个分类器，并将这些分类器线性组合，提高分类器性能。 数学表示为：$ f(x) = w_0 + \sum\limits_{m=1}^M w_m \phi_m(x) $   Gradient Boosting Decison Tree gbdt是通过采用加法模型(即基函数的线性组合">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/25/images/gbdt.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -159,35 +161,47 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-gbdt" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      gbdt 梯度提升树
     </h1>
   
 
         
-        <a href="/2018/03/25/hello-world/" class="archive-article-date">
-  	<time datetime="2018-03-25T11:22:40.893Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
+        <a href="/2018/03/25/gbdt/" class="archive-article-date">
+  	<time datetime="2018-03-25T14:00:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="梯度提升树-gbdt"><a href="#梯度提升树-gbdt" class="headerlink" title="梯度提升树 gbdt"></a><a href="https://www.cnblogs.com/ModifyRong/p/7744987.html" target="_blank" rel="noopener">梯度提升树 gbdt</a></h2><h3 id="boosting-提升"><a href="#boosting-提升" class="headerlink" title="boosting  提升"></a>boosting  提升</h3><blockquote>
+<ul>
+<li>通过改变训练样本的权重(增加错分样本的权重，减小分对样本的的权重)，学习多个分类器，并将这些分类器线性组合，提高分类器性能。</li>
+<li>数学表示为：<br>$ f(x) = w_0 + \sum\limits_{m=1}^M w_m \phi_m(x) $</li>
+</ul>
+</blockquote>
+<h3 id="Gradient-Boosting-Decison-Tree"><a href="#Gradient-Boosting-Decison-Tree" class="headerlink" title="Gradient Boosting Decison Tree"></a>Gradient Boosting Decison Tree</h3><blockquote>
+<p>gbdt是通过采用加法模型(即基函数的<code>线性组合</code>)，以及不断减小训练过程产生的<code>残差</code>来达到将数据分类或回归的算法。训练过程如下：<br><img src="../images/gbdt.png" alt="Alt text"></p>
+</blockquote>
+<h3 id="模型-model-："><a href="#模型-model-：" class="headerlink" title="模型(model)："></a>模型(model)：</h3><blockquote>
+<ul>
+<li>模型最终可以描述为：<br>$$F_{m}(x) = \sum_{m=1}^{M}T\left ( x;\theta _m \right )$$</li>
+<li>模型一共训练M轮，每轮产生一个弱分类器 $T(x;θm)$。弱分类器的损失函数：<br>$$\hat\theta_{m} = \mathop{\arg\min}<em>{\theta</em>{m}} \sum_{i=1}^{N}L\left ( y_{i},F_{m-1}(x_{i})+T(x_{i};\theta_{m} ) \right )$$<ul>
+<li>选择平方误差，那这个差值就是<code>残差</code>。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="gbdt如何选择特征？"><a href="#gbdt如何选择特征？" class="headerlink" title="gbdt如何选择特征？"></a>gbdt如何选择特征？</h3><blockquote>
+<p>gbdt的弱分类器默认选择的是<code>CART树</code>。选择的前提是低方差和高偏差，框架服从boosting框架即可。</p>
+</blockquote>
 
       
 
@@ -267,7 +281,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/03/25/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/03/25/gbdt/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -281,15 +295,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/03/25/gbdt/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          gbdt 梯度提升树
-        
-      </div>
-    </a>
   
+    <a href="/2018/03/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

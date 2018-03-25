@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
@@ -32,10 +32,11 @@
 
   
 
+  <!-- <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet"> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
-  <div id="container" q-class="show:isCtnShow">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
@@ -156,27 +157,48 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-Hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-gbdt" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/25/hello-Hexo/">hello,Hexo</a>
+      <a class="article-title" href="/2018/03/25/gbdt/">gbdt 梯度提升树</a>
     </h1>
   
 
         
-        <a href="/2018/03/25/hello-Hexo/" class="archive-article-date">
-  	<time datetime="2018-03-25T11:45:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
+        <a href="/2018/03/25/gbdt/" class="archive-article-date">
+  	<time datetime="2018-03-25T14:00:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="梯度提升树-gbdt"><a href="#梯度提升树-gbdt" class="headerlink" title="梯度提升树 gbdt"></a><a href="https://www.cnblogs.com/ModifyRong/p/7744987.html" target="_blank" rel="noopener">梯度提升树 gbdt</a></h2><h3 id="boosting-提升"><a href="#boosting-提升" class="headerlink" title="boosting  提升"></a>boosting  提升</h3><blockquote>
+<ul>
+<li>通过改变训练样本的权重(增加错分样本的权重，减小分对样本的的权重)，学习多个分类器，并将这些分类器线性组合，提高分类器性能。</li>
+<li>数学表示为：<br>$ f(x) = w_0 + \sum\limits_{m=1}^M w_m \phi_m(x) $</li>
+</ul>
+</blockquote>
+<h3 id="Gradient-Boosting-Decison-Tree"><a href="#Gradient-Boosting-Decison-Tree" class="headerlink" title="Gradient Boosting Decison Tree"></a>Gradient Boosting Decison Tree</h3><blockquote>
+<p>gbdt是通过采用加法模型(即基函数的<code>线性组合</code>)，以及不断减小训练过程产生的<code>残差</code>来达到将数据分类或回归的算法。训练过程如下：<br><img src="../images/gbdt.png" alt="Alt text"></p>
+</blockquote>
+<h3 id="模型-model-："><a href="#模型-model-：" class="headerlink" title="模型(model)："></a>模型(model)：</h3><blockquote>
+<ul>
+<li>模型最终可以描述为：<br>$$F_{m}(x) = \sum_{m=1}^{M}T\left ( x;\theta _m \right )$$</li>
+<li>模型一共训练M轮，每轮产生一个弱分类器 $T(x;θm)$。弱分类器的损失函数：<br>$$\hat\theta_{m} = \mathop{\arg\min}<em>{\theta</em>{m}} \sum_{i=1}^{N}L\left ( y_{i},F_{m-1}(x_{i})+T(x_{i};\theta_{m} ) \right )$$<ul>
+<li>选择平方误差，那这个差值就是<code>残差</code>。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="gbdt如何选择特征？"><a href="#gbdt如何选择特征？" class="headerlink" title="gbdt如何选择特征？"></a>gbdt如何选择特征？</h3><blockquote>
+<p>gbdt的弱分类器默认选择的是<code>CART树</code>。选择的前提是低方差和高偏差，框架服从boosting框架即可。</p>
+</blockquote>
+
       
 
       
@@ -188,7 +210,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/25/hello-Hexo/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/03/25/gbdt/">展开全文 >></a>
         </p>
       
 
@@ -433,26 +455,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               <a href="http://blog.stormma.me/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>一北大神</a>
             </li>
           
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
         </ul>
   		
     	</section>
@@ -534,6 +536,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     </div>
 
 </div>
-  </div>
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 </body>
 </html>
